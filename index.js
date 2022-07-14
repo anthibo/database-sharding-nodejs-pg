@@ -58,9 +58,7 @@ app.get("/:urlId", async (req, res) => {
 
 app.post("/", async (req, res) => {
 
-    const url = req.query.url;
-    //www.wikipedia.com/sharding
-    //consistently hash this to get a port! 
+    const url = req.query.url; 
     const hash = crypto.createHash("sha256").update(url).digest("base64")
     const urlId = hash.substr(0, 5);
 
