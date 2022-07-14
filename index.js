@@ -67,7 +67,6 @@ app.post("/", async (req, res) => {
     const server = hr.get(urlId)
     console.log(server)
     await clients[server].query("INSERT INTO URL_TABLE (URL, URL_ID) VALUES ($1,$2)", [url, urlId]);
-    console.log(await clients[server].query("SELECT * FROM URL_TABLE "));
 
 
     res.send({
