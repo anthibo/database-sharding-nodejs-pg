@@ -27,7 +27,7 @@ node index.js
   ``` 
   POST: http://localhost:8081/?url=http://stackoverflow.com
   ```
- - get the url hash of a saved url
+ - get the url of a saved url id (hash)
     ```
     GET: http://localhost:8081/:url_hash
     ```
